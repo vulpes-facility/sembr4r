@@ -3,13 +3,15 @@
 ## Summary
 
 When writing text with a compatible markup language,
-add a line break after each substantial unit of thought.
+add a line break after each substantial unit of thought,
+and make sure that line break appears in the rendered output.
 
 ## Introduction
 
-_Semantic Line Breaks_ describe a set of conventions
-for using insensitive vertical whitespace
-to structure prose along semantic boundaries.
+_Semantic Line Breaks for Readers_ describe a set of conventions
+for using vertical whitespace
+to structure prose along semantic boundaries,
+both in the source and in the rendered output.
 
 Many lightweight markup languages,
 including
@@ -19,9 +21,13 @@ including
 join consecutive lines with a space.
 Conventional markup languages like HTML and XML
 exhibit a similar behavior in particular contexts.
-This behavior allows line breaks to be used as semantic delimiters,
+The original [Semantic Line Breaks][sembr-org] specification
+relies on this behavior to use line breaks as semantic delimiters,
 making prose easier to author, edit, and read in source ---
 without affecting the rendered output.
+
+This specification keeps those line breaks in the rendered output,
+so that readers can see the same structure as writers.
 
 To understand the benefit of semantic line breaks,
 consider the following paragraph from the
@@ -59,8 +65,14 @@ They are endowed with reason and conscience
 and should act towards one another in a spirit of brotherhood.
 </pre>
 
-Despite these changes made to the source,
-the final rendered output remains the same:
+Under the original specification,
+these changes made to the source do not affect the final rendered output,
+so readers still see a single block of text:
+
+> All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
+
+Under this specification,
+the same line breaks appear in the final rendered output:
 
 > All human beings are born free and equal in dignity and rights.
 > They are endowed with reason and conscience
@@ -69,7 +81,7 @@ the final rendered output remains the same:
 By inserting line breaks at semantic boundaries,
 writers, editors, and other collaborators
 can make source text easier to work with,
-without affecting how it's seen by readers.
+and readers can follow the same structure in the rendered output.
 
 ## Semantic Line Breaks Specification (SemBr)
 
@@ -130,15 +142,20 @@ a change to one sentence or clause shows up as a change to one line,
 rather than as a reflow of the entire paragraph.
 
 For a **reader**,
-semantic line breaks are entirely invisible —
-no changes to the source text appear in the final rendered output.
+semantic line breaks make the structure of the text visible —
+every sentence starts on a new line,
+and clauses are set apart where the writer would pause.
 
 ## FAQ
 
 ### Which light markup languages support semantic line breaks?
 
-The following light markup languages
-are verified to support semantic line breaks:
+Any markup language that can display a line break within a paragraph
+is compatible with this specification.
+
+The original specification verifies that
+the following light markup languages
+join consecutive lines with a space:
 
 - [AsciiDoc][asciidoc]
 - [CommonMark][commonmark]
@@ -152,6 +169,13 @@ are verified to support semantic line breaks:
 - [roff][roff]
 - [Typst][typst]
 
+In these languages,
+a line break in the source does not appear in the rendered output by itself.
+To follow rule 2,
+use the language's line break syntax,
+as described in "How do I force a line break?" below,
+or use a renderer that displays every line break in the source.
+
 ### How do I know when to add semantic line breaks?
 
 Try reading the text out loud,
@@ -162,24 +186,21 @@ is usually a good candidate for a semantic line break.
 
 ### How do I use semantic line breaks with dashes?
 
-Compatible markup languages join consecutive lines with a space,
-so a line break after an em dash preserves the rendered output
-only when the dash is already set off by spaces:
+Because a semantic line break appears in the rendered output,
+a line break after an em dash works
+whether or not the dash is set off by spaces:
 
 <pre>
 The food — which was delicious —
 reminded me of home.
 </pre>
 
-If you write em dashes without surrounding spaces,
-keep the dash and the words on either side of it on the same line,
-and break at the next clause or sentence boundary instead:
-
 <pre>
-The food—which was delicious—reminded me of home.
+The food—which was delicious—
+reminded me of home.
 </pre>
 
-The same applies to a spaced en dash (–),
+The same applies to an en dash (–),
 which some style guides prefer.
 
 ### How do I migrate existing prose to use semantic line breaks?
@@ -208,6 +229,9 @@ The [SemBr skill][sembr-skills] helps your coding agent
 apply semantic line breaks to prose.
 It works with agents that support the [Agent Skills standard][agent-skills],
 including Claude Code, Cursor, and Codex.
+The skill follows the original specification,
+so it keeps line breaks out of the rendered output;
+the prompt below also asks the agent to add line break syntax.
 
 With Node.js and npm installed,
 run this command in your project directory:
@@ -221,7 +245,10 @@ Then ask your agent:
 
 ```text
 Use sembr-reformat to apply semantic line breaks to README.md.
-Preserve the wording and rendered output.
+Preserve the wording.
+Then add a trailing backslash (\) to every line
+that is followed by another line of the same paragraph, list item, or block quote,
+so that each line break appears in the rendered output.
 ```
 
 The [SemBr skills guide][sembr-skills]
@@ -248,7 +275,19 @@ The following community tools insert or check semantic line breaks:
 - [semantic-linebreaker][semantic-linebreaker] by waldyrious,
   a browser-based utility
 
+These tools were built for the original specification.
+If a tool keeps line breaks out of the rendered output,
+combine it with your markup language's line break syntax
+or with a renderer that displays every line break in the source.
+
 ### How do I force a line break?
+
+Rule 2 requires every semantic line break to appear in the rendered output.
+In a markup language that joins consecutive lines with a space,
+use its line break syntax at the end of each line
+that continues a paragraph, list item, or block quote.
+Some renderers display every line break in the source as a line break;
+with such a renderer, no extra syntax is needed.
 
 Some lightweight markup languages provide a dedicated syntax for line breaks,
 some support line breaks using the inline HTML element `<br>`[^1],
@@ -305,6 +344,9 @@ Changes from the original, made on 2026-10-18:
   It now reads:
   "A semantic line break
   MUST appear as a line break in the final rendered output of the document."
+- The Summary, the Introduction,
+  "Why Use Semantic Line Breaks?", and the FAQ
+  were revised to match the new rule 2.
 
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
