@@ -87,7 +87,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 11. A line break SHOULD NOT occur before inline markup unless it is also a semantic line break.
 12. A maximum line length of 80 characters is RECOMMENDED.
 13. A line MAY exceed the maximum line length if necessary,\
-    such as to accommodate hyperlinks, code elements, or other markup.
+    such as to keep a unit of thought on one line or to accommodate hyperlinks, code elements, or other markup.
 
 ## Why Use Semantic Line Breaks?
 
@@ -304,6 +304,7 @@ Changes from the original, made on 2026-10-18:
 - Line breaks throughout this document,\
   including the quoted About section of the original specification,\
   were moved to sentence and clause boundaries.
+- Rule 13 now also allows a line to exceed the maximum line length to keep a unit of thought on one line.
 
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
