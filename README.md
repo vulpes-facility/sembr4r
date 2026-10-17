@@ -40,16 +40,16 @@ this paragraph appears in source as a long, continuous line of text\
 (which may be automatically wrapped at a fixed column length,\
 depending on your editor settings):
 
-<pre>\
-All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.\
+<pre>
+All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
 </pre>
 
 Adding a line break after each sentence\
 makes it easier to understand the shape and structure of the source text:
 
-<pre>\
-All human beings are born free and equal in dignity and rights.\
-They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.\
+<pre>
+All human beings are born free and equal in dignity and rights.
+They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
 </pre>
 
 We can further clarify the source text by adding a line break\
@@ -59,10 +59,10 @@ the "and" used as a coordinating conjunction between "reason and conscience" and
 the "and" used as a subordinating conjunction with the clause\
 "and should act towards one another in a spirit of brotherhood":
 
-<pre>\
-All human beings are born free and equal in dignity and rights.\
-They are endowed with reason and conscience\
-and should act towards one another in a spirit of brotherhood.\
+<pre>
+All human beings are born free and equal in dignity and rights.
+They are endowed with reason and conscience
+and should act towards one another in a spirit of brotherhood.
 </pre>
 
 Under the original specification,\
@@ -190,14 +190,14 @@ Because a semantic line break appears in the rendered output,\
 a line break after an em dash works\
 whether or not the dash is set off by spaces:
 
-<pre>\
-The food — which was delicious —\
-reminded me of home.\
+<pre>
+The food — which was delicious —
+reminded me of home.
 </pre>
 
-<pre>\
-The food—which was delicious—\
-reminded me of home.\
+<pre>
+The food—which was delicious—
+reminded me of home.
 </pre>
 
 The same applies to an en dash (–),\
