@@ -345,6 +345,10 @@ of the `sembr/specification` repository,\
 and it is not affiliated with or endorsed by the original author.\
 This derivative is also licensed under CC BY 4.0.
 
+The source code of the website,\
+in `site/`, `.github/workflows/`, and `package.json`,\
+is licensed under the [MIT License][site-license] instead.
+
 Changes from the original, made on 2026-10-18:
 
 - Rule 2 originally read:\
@@ -390,6 +394,7 @@ Changes from the original, made on 2026-10-18:
 [sembr-org]: https://sembr.org
 [sembr-skills]: https://github.com/sembr/skills
 [semver]: http://semver.org
+[site-license]: https://github.com/vulpes-facility/sembr4r/blob/main/site/LICENSE
 [typst]: https://typst.app/docs/reference/syntax/
 [udhr]: http://www.un.org/en/universal-declaration-human-rights/
 [upstream-readme]: https://github.com/sembr/specification/blob/b15f658507270cd878636c83cc2ad7cbaeca2967/README.md
