@@ -28,9 +28,9 @@ consider the following paragraph from the [_Universal Declaration of Human Right
 > All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
 
 Without any line breaks at all,\
-this paragraph appears in source as a long, continuous line of text\
-(which may be automatically wrapped at a fixed column length,\
-depending on your editor settings):
+this paragraph appears in source as a long, continuous line of text[^wrap]:
+
+[^wrap]: Depending on your editor settings, this line may be automatically wrapped at a fixed column length.
 
 <pre>
 All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
@@ -158,6 +158,17 @@ reminded me of home.
 
 The same applies to an en dash (–),\
 which some style guides prefer.
+
+### How do I use semantic line breaks with parentheses?
+
+A short parenthetical,\
+such as "(.)" in rule 4,\
+can stay on its line.\
+A longer aside that needs line breaks of its own makes readers switch context in the middle of a sentence.\
+Consider moving such an aside to a footnote,\
+if your markup language supports footnotes,\
+or rewriting it as a separate sentence.\
+The Introduction above moves one such aside to a footnote.
 
 ### How do I migrate existing prose to use semantic line breaks?
 
@@ -305,6 +316,8 @@ Changes from the original, made on 2026-10-18:
   including the quoted About section of the original specification,\
   were moved to sentence and clause boundaries.
 - Rule 13 now also allows a line to exceed the maximum line length to keep a unit of thought on one line.
+- The FAQ now explains how to handle parenthetical asides,\
+  and a parenthetical aside in the Introduction was moved to a footnote.
 
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
