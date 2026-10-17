@@ -1,0 +1,12 @@
+{
+  "name": "sembr4r",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node site/build.js"
+  },
+  "devDependencies": {
+    "markdown-it": "14.1.0",
+    "markdown-it-footnote": "4.0.0"
+  }
+}
