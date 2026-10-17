@@ -110,18 +110,20 @@ in this document are to be interpreted as described in\
    or em dash (—).
 6. A semantic line break\
    MAY occur after a dependent clause\
-   in order to clarify grammatical structure or satisfy line length constraints.
+   in order to clarify grammatical structure.
 7. A semantic line break\
    is RECOMMENDED before an enumerated or itemized list.
 8. A semantic line break\
    MAY be used after one or more items in a list\
-   in order to logically group related items or satisfy line length constraints.
+   in order to logically group related items.
 9. A semantic line break\
    MUST NOT occur within a hyphenated word.
-10. A semantic line break\
-    MAY occur before and after a hyperlink.
-11. A semantic line break\
-    MAY occur before inline markup.
+10. A line break\
+    SHOULD NOT occur before or after a hyperlink\
+    unless it is also a semantic line break.
+11. A line break\
+    SHOULD NOT occur before inline markup\
+    unless it is also a semantic line break.
 12. A maximum line length of 80 characters is RECOMMENDED.
 13. A line MAY exceed the maximum line length if necessary,\
     such as to accommodate hyperlinks, code elements, or other markup.
@@ -366,6 +368,11 @@ Changes from the original, made on 2026-10-18:
 - Every semantic line break in this document\
   ends with a trailing backslash (`\`)\
   so that it appears in the rendered output.
+- Rules 6 and 8 no longer allow a line break\
+  only to satisfy line length constraints,\
+  and rules 10 and 11 now discourage line breaks around hyperlinks and inline markup\
+  instead of allowing them,\
+  because every line break now appears in the rendered output.
 
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
