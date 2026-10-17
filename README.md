@@ -1,4 +1,4 @@
-# Semantic Line Breaks
+# Semantic Line Breaks for Readers
 
 ## Summary
 
@@ -83,7 +83,7 @@ writers, editors, and other collaborators
 can make source text easier to work with,
 and readers can follow the same structure in the rendered output.
 
-## Semantic Line Breaks Specification (SemBr)
+## Semantic Line Breaks for Readers Specification (SemBr4R)
 
 The key words "MUST", "MUST NOT", "REQUIRED",
 "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
@@ -308,21 +308,29 @@ and some do both.
 
 ## About
 
-The Semantic Line Breaks specification is authored by [Mattt][mattt].
+Semantic Line Breaks for Readers is maintained by Chan-yeong Kang.
+It is an unofficial derivative of the
+[Semantic Line Breaks][sembr-org] specification by [Mattt][mattt],
+and it is not affiliated with or endorsed by the original author.
 
-This specification is an attempt to encapsulate
-best practices that I've encountered
-while working on technical writing teams at several different companies.
-It follows the general structure of the
-[Semantic Versioning specification][semver] by Tom Preston-Werner.
-
-In the process of developing this document,
-I came across
-[this excellent blog post][one-sentence-per-line] by Brandon Rhodes
-that includes extensive research about the origin of this technique.
-
-If you’d like to leave feedback, please
+If you’d like to leave feedback on this specification, please
 [open an issue on GitHub][github-issues].
+
+### The Original Specification
+
+The Semantic Line Breaks specification is authored by [Mattt][mattt].
+The following is from the About section of the original specification:
+
+> This specification is an attempt to encapsulate
+> best practices that I've encountered
+> while working on technical writing teams at several different companies.
+> It follows the general structure of the
+> [Semantic Versioning specification][semver] by Tom Preston-Werner.
+>
+> In the process of developing this document,
+> I came across
+> [this excellent blog post][one-sentence-per-line] by Brandon Rhodes
+> that includes extensive research about the origin of this technique.
 
 ## License
 
@@ -347,6 +355,9 @@ Changes from the original, made on 2026-10-18:
 - The Summary, the Introduction,
   "Why Use Semantic Line Breaks?", and the FAQ
   were revised to match the new rule 2.
+- The title, the specification heading, and the About section
+  were changed to name this derivative, credit its maintainer,
+  and point feedback to its own repository.
 
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
@@ -355,7 +366,7 @@ Changes from the original, made on 2026-10-18:
 [casile-filter]: https://github.com/sile-typesetter/casile/blob/master/pandoc-filters/sentence_lines.lua
 [cc-by-4.0]: https://creativecommons.org/licenses/by/4.0/
 [commonmark]: http://commonmark.org
-[github-issues]: https://github.com/sembr/specification/issues
+[github-issues]: https://github.com/vulpes-facility/sembr4r/issues
 [haddock]: https://www.haskell.org/haddock/doc/html/
 [latex]: https://www.latex-project.org/
 [markdown]: https://daringfireball.net/projects/markdown/
