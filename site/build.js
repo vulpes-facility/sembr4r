@@ -35,6 +35,22 @@ md.core.ruler.push('heading_ids', (state) => {
   });
 });
 
+// Wrap each line of a paragraph in a block-level span,
+// so that the stylesheet can indent lines wrapped by the screen width
+// and readers can tell them apart from semantic line breaks.
+md.core.ruler.push('semantic_lines', (state) => {
+  const html = (content) => Object.assign(new state.Token('html_inline', '', 0), { content });
+  state.tokens.forEach((token, i) => {
+    if (token.type !== 'inline' || state.tokens[i - 1]?.type !== 'paragraph_open') return;
+    const children = [html('<span class="line">')];
+    for (const child of token.children) {
+      children.push(child.type === 'hardbreak' ? html('</span>\n<span class="line">') : child);
+    }
+    children.push(html('</span>'));
+    token.children = children;
+  });
+});
+
 const source = await readFile(new URL('README.md', root), 'utf8');
 const env = {};
 const tokens = md.parse(source, env);

@@ -72,6 +72,13 @@ li + li {
   margin-top: 0.5rem;
 }
 
+/* Indent lines wrapped by the screen width so they differ from semantic line breaks. */
+.line {
+  display: block;
+  padding-left: 1.25em;
+  text-indent: -1.25em;
+}
+
 blockquote {
   margin-left: 0;
   padding-left: 1rem;
@@ -120,6 +127,10 @@ td {
 
 th {
   background: var(--surface);
+}
+
+sup {
+  line-height: 0;
 }
 
 .footnotes-sep {
