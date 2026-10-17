@@ -82,7 +82,7 @@ in this document are to be interpreted as described in
 1. Text written as plain text or a compatible markup language
    MAY use semantic line breaks.
 2. A semantic line break
-   MUST NOT alter the final rendered output of the document.
+   MUST appear as a line break in the final rendered output of the document.
 3. A semantic line break
    SHOULD NOT alter the intended meaning of the text.
 4. A semantic line break
@@ -289,6 +289,23 @@ If you’d like to leave feedback, please
 
 [Creative Commons Attribution 4.0 International (CC BY 4.0)][cc-by-4.0]
 
+Semantic Line Breaks for Readers (SemBr4R)
+is an unofficial derivative of
+[Semantic Line Breaks][sembr-org] by [Mattt][mattt].
+It is based on [`README.md` at commit `b15f658`][upstream-readme]
+of the `sembr/specification` repository,
+and it is not affiliated with or endorsed by the original author.
+This derivative is also licensed under CC BY 4.0.
+
+Changes from the original, made on 2026-10-18:
+
+- Rule 2 originally read:
+  "A semantic line break
+  MUST NOT alter the final rendered output of the document."
+  It now reads:
+  "A semantic line break
+  MUST appear as a line break in the final rendered output of the document."
+
 [admk-sembr]: https://github.com/admk/sembr
 [agent-skills]: https://agentskills.io/home
 [asciidoc]: http://asciidoc.org
@@ -313,7 +330,9 @@ If you’d like to leave feedback, please
 [rst-line-block]: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks
 [semantic-linebreaker]: https://github.com/waldyrious/semantic-linebreaker
 [semantic-linefeeds]: https://github.com/arloliu/semantic-linefeeds
+[sembr-org]: https://sembr.org
 [sembr-skills]: https://github.com/sembr/skills
 [semver]: http://semver.org
 [typst]: https://typst.app/docs/reference/syntax/
 [udhr]: http://www.un.org/en/universal-declaration-human-rights/
+[upstream-readme]: https://github.com/sembr/specification/blob/b15f658507270cd878636c83cc2ad7cbaeca2967/README.md
