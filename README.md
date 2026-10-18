@@ -271,6 +271,8 @@ Semantic Line Breaks for Readers is maintained by Chan-yeong Kang.\
 It is an unofficial derivative of the [Semantic Line Breaks][sembr-org] specification by [Mattt][mattt],\
 and it is not affiliated with or endorsed by the original author.
 
+Changes from the original were made with Claude, an AI assistant by Anthropic.
+
 If you’d like to leave feedback on this specification,\
 please [open an issue on GitHub][github-issues].
 
@@ -306,7 +308,7 @@ Changes from the original, made on 2026-10-18:
   It now reads:\
   "A semantic line break MUST appear as a line break in the final rendered output of the document."
 - The Summary, the Introduction, "Why Use Semantic Line Breaks?", and the FAQ were revised to match the new rule 2.
-- The title, the specification heading, and the About section were changed to name this derivative, credit its maintainer, and point feedback to its own repository.
+- The title, the specification heading, and the About section were changed to name this derivative, credit its maintainer, note that the changes were made with Claude, and point feedback to its own repository.
 - Every semantic line break in this document ends with a trailing backslash (`\`)\
   so that it appears in the rendered output.
 - Rules 6 and 8 no longer allow a line break only to satisfy line length constraints,\
