@@ -298,7 +298,7 @@ and it is not affiliated with or endorsed by the original author.\
 This derivative is also licensed under CC BY 4.0.
 
 The source code of the website,\
-in `site/`, `.github/workflows/`, and `package.json`,\
+in `site/`, `.github/`, and `package.json`,\
 is licensed under the [MIT License][site-license] instead.
 
 Changes from the original, made on 2026-10-18:
