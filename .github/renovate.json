@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate updates only what Dependabot version updates cannot: the Node.js version of the Pages workflow and the transitive npm packages in package-lock.json.",
+  "extends": ["config:recommended"],
+  "enabledManagers": ["github-actions", "npm"],
+  "packageRules": [
+    {
+      "description": "Dependabot updates the actions of the workflows.",
+      "matchManagers": ["github-actions"],
+      "enabled": false
+    },
+    {
+      "description": "Dependabot cannot update the Node.js version that actions/setup-node installs.",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["uses-with"],
+      "enabled": true
+    },
+    {
+      "description": "Dependabot updates the npm packages in package.json; lock file maintenance stays on.",
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "rollback", "bump", "replacement"],
+      "enabled": false
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}
